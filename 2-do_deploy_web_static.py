@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Fabric script that distributes an 
+Fabric script that distributes an
 archive to your web servers
 """
 
