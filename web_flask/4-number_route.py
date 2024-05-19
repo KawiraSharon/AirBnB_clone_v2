@@ -2,8 +2,8 @@
 """Starts a Flask web application.
 The application listens on 0.0.0.0, port 5000.
 Routes:
-    /: Displays 'Hello HBNB!'.
-    /hbnb: Displays 'HBNB'.
+    /: Display'Hello HBNB!'.
+    /hbnb: Display'HBNB'.
     /c/<text>: Displays 'C' followed by the value of <text>.
     /python/(<text>): Displays 'Python' followed by the value of <text>.
     /number/<n>: Displays 'n is a number' only if <n> is an integer.
@@ -16,20 +16,20 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
-    """Displays 'Hello HBNB!'."""
-    return "Hello HBNB!"
+    """Display'Hello HBNB!'."""
+    return "HelloHBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """Displays 'HBNB'."""
+    """Display'HBNB'."""
     return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
-    """Displays 'C' followed by the value of <text>.
-    Replaces any underscores in <text> with slashes.
+    """Display'Cfollowed by the value of <text>.
+    Replaces underscores in <text> with slashes.
     """
     text = text.replace("_", " ")
     return "C {}".format(text)
@@ -38,8 +38,8 @@ def c(text):
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
-    """Displays 'Python' followed by the value of <text>.
-    Replaces any underscores in <text> with slashes.
+    """Display'Python' then value of <text>.
+    Replaces txt underscores with slashes.
     """
     text = text.replace("_", " ")
     return "Python {}".format(text)
@@ -47,7 +47,7 @@ def python(text="is cool"):
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
-    """Displays 'n is a number' only if n is an integer."""
+    """Display'n as a number' for n if int"""
     return "{} is a number".format(n)
 
 

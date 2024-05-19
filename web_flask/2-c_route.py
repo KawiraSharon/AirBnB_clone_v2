@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Starts a Flask web application.
-The application listens on 0.0.0.0, port 5000.
-Routes:
-    /: Displays 'Hello HBNB!'.
+The app listens on 0.0.0.0, port 5000.
+Routes-->
+    /: Display'Hello HBNB!'.
     /hbnb: Displays 'HBNB'.
     /c/<text>: Displays 'C' followed by the value of <text>.
 """
@@ -25,7 +25,7 @@ def hbnb():
 
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
-    """Displays 'C' followed by the value of <text>."""
+    """Display'C' then the value of <text>."""
     text = text.replace("_", " ")
     return "C {}".format(text)
 
